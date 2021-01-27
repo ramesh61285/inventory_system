@@ -5,6 +5,7 @@ import { TextField, Switch } from "formik-material-ui";
 import { Button, Typography, Grid, Input, InputLabel, InputAdornment } from "@material-ui/core";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import LockIcon from "@material-ui/icons/Lock";
+import Head from "next/head";
 
 interface Values {
   username: string;
@@ -14,18 +15,23 @@ interface Values {
 function Login() {
   const loginPageStyle = {
     margin: "32px auto 37px",
-    maxWidth: "530px",
+    // maxWidth: "530px",
     background: "#fff",
-    padding: "30px",
-    borderRadius: "10px",
+    padding: "0.5rem",
+    borderRadius: "0.2rem",
     boxShadow: "0px 0px 10px 10px rgba(0,0,0,0.15)",
   };
 
   return (
     <div>
+      <Head>
+        <title>Login</title>
+        <link rel="icon" href="/Ramesh.ico" />
+      </Head>
       <Grid container direction="row" justify="center" alignItems="center">
-        <Grid item xs={6} sm={4} alignItems="center">
-          <Box sx={{ border: "1px dashed grey" }} className="loginPageStyle">
+        <Grid item xs={12} sm={4}></Grid>
+        <Grid item xs={12} sm={4} alignItems="center">
+          <Box sx={{ border: "1px solid grey" }} className="loginPageStyle">
             <h2>Login Page</h2>
             <Formik
               initialValues={{
@@ -57,7 +63,7 @@ function Login() {
               {({ submitForm, isSubmitting, touched, errors }) => (
                 <Form>
                   <Field
-                    style={{ margin: "0.5rem" }}
+                    style={{ margin: "0.5rem", padding: "7.5px 15px" }}
                     component={TextField}
                     name="username"
                     type="text"
@@ -73,6 +79,7 @@ function Login() {
                   />
 
                   <Field
+                    style={{ margin: "0.5rem", padding: "7.5px 15px" }}
                     component={TextField}
                     type="password"
                     label="Password"
@@ -85,7 +92,7 @@ function Login() {
                       ),
                     }}
                   />
-
+                  <br></br>
                   <Button variant="contained" color="primary" disabled={isSubmitting} onClick={submitForm}>
                     Submit
                   </Button>
@@ -94,7 +101,7 @@ function Login() {
             </Formik>
           </Box>
         </Grid>
-        <Grid item xs={6} sm={4}></Grid>
+        <Grid item xs={12} sm={4}></Grid>
       </Grid>
     </div>
   );
