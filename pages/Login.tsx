@@ -33,7 +33,7 @@ function Login() {
 				<Grid item xs={12} sm={4} alignItems="center">
 					<Box sx={{ border: "1px solid grey" }} className="loginPageStyle">
 						<h2>Login</h2>
-						<h3>Added by sandeep</h3>
+						<h3>Added by sandeep k</h3>
 						<Formik
 							initialValues={{
 								username: "",
