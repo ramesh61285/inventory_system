@@ -32,7 +32,7 @@ function Login() {
         <Grid item xs={12} sm={4}></Grid>
         <Grid item xs={12} sm={4} alignItems="center">
           <Box sx={{ border: "1px solid grey" }} className="loginPageStyle">
-            <h2>Login Page</h2>
+            <h2>Login Page Inventory</h2>
             <Formik
               initialValues={{
                 username: "",
