@@ -25,14 +25,14 @@ function Login() {
   return (
     <div>
       <Head>
-        <title>Login</title>
+        <title>Login titles</title>
         <link rel="icon" href="/Ramesh.ico" />
       </Head>
       <Grid container direction="row" justify="center" alignItems="center">
         <Grid item xs={12} sm={4}></Grid>
         <Grid item xs={12} sm={4} alignItems="center">
           <Box sx={{ border: "1px solid grey" }} className="loginPageStyle">
-            <h2>Login Page Inventory</h2>
+            <h2>Login</h2>
             <Formik
               initialValues={{
                 username: "",
@@ -41,7 +41,7 @@ function Login() {
               validate={(values) => {
                 const errors: Partial<Values> = {};
                 if (!values.username) {
-                  errors.username = "Please enter Username";
+                  errors.username = "Please enter Usernames";
                 }
                 if (!values.password) {
                   errors.password = "Please enter Password";
